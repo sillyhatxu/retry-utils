@@ -8,7 +8,7 @@ func Do(customRetryFunc CustomRetryFunc, opts ...Option) error {
 	//default
 	config := &Config{
 		attempts:      3,
-		delay:         200 * time.Millisecond,
+		delay:         500 * time.Millisecond,
 		errorCallback: func(n uint, err error) {},
 		delayType:     BackOffDelay,
 	}
